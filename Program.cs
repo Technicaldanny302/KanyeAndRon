@@ -1,14 +1,19 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Net.Http;
+using System.Text.Json.Nodes;
+using static System.Net.WebRequestMethods;
 
 
 namespace KanyeAndRon
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            var client = new HttpClient();
+            QuoteGenerator.KanyeQuote();
+
+            QuoteGenerator.RonQuote();
         }
     }
 }
